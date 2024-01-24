@@ -6,7 +6,6 @@ import {
   input
 } from '@angular/core';
 import { FormsModule } from "@angular/forms";
-import { every } from "rxjs";
 @Component({
   selector: 'app-demo',
   standalone: true,
@@ -14,10 +13,14 @@ import { every } from "rxjs";
   styleUrl: './demo.component.scss',
   template: `
     <div>
-      
+      <button (click)="fns()"></button>
     </div>
   `
 })
 export class DemoComponent {
+  @Output() clickC = new EventEmitter()
 
+  fns() {
+    this.clickC.emit('vvv')
+  }
 }

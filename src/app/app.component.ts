@@ -11,10 +11,15 @@ import { SerService } from "./ser.service";
   styleUrl: './app.component.scss',
   template: `
     <div>
-
+      <app-demo (clickC)="gFn($event)"></app-demo>
+      <p>{{ c }}</p>
     </div>
   `,
 })
 export class AppComponent {
+  c = ''
 
+  gFn(val: string) {
+    this.c = val
+  }
 }
