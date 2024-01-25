@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule, NgForm } from "@angular/forms";
-import { Task } from "../task";
+import { Task } from "../Task";
 @Component({
   selector: 'app-demo',
   standalone: true,
