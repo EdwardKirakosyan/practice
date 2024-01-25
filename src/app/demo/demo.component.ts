@@ -1,10 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  Output,
-  input
-} from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 @Component({
   selector: 'app-demo',
@@ -13,14 +7,10 @@ import { FormsModule } from "@angular/forms";
   styleUrl: './demo.component.scss',
   template: `
     <div>
-      <button (click)="fns()"></button>
+      
     </div>
   `
 })
 export class DemoComponent {
-  @Output() clickC = new EventEmitter()
 
-  fns() {
-    this.clickC.emit('vvv')
-  }
 }
