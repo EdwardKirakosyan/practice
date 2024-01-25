@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule, NgForm } from "@angular/forms";
+import { Task } from "../task";
 @Component({
   selector: 'app-demo',
   standalone: true,
@@ -29,9 +30,12 @@ import { FormsModule, NgForm } from "@angular/forms";
   `
 })
 export class DemoComponent {
+  @Output()
+  emitTask: EventEmitter<Task> = new EventEmitter<Task>()
 
   onSubmit(form: NgForm) {
-    console.log(form)
+    this.emitTask.emit(form.value)
+    console.log(form.value)
   }
 
 }
