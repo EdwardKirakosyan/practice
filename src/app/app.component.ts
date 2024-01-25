@@ -10,7 +10,7 @@ import { DemoComponent } from "./demo/demo.component";
   styleUrl: './app.component.scss',
   template: `
     <div>
-
+      <app-demo></app-demo>
     </div>
   `,
 })
